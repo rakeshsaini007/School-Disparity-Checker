@@ -1,0 +1,5 @@
+{
+  "name": "School Disparity Checker",
+  "description": "A professional tool to compare school datasets between 'Data' and 'SchoolList' sheets, identifying remaining schools and generating PDF reports via Google Apps Script.",
+  "requestFramePermissions": []
+}
