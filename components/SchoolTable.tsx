@@ -37,20 +37,20 @@ export const SchoolTable: React.FC<SchoolTableProps> = ({ schools, loading }) =>
         <thead>
           <tr className="bg-slate-50 border-b border-slate-100">
             <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">#</th>
-            <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">School Name</th>
             <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Nyay Panchayat</th>
+            <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">School Name</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-100">
           {schools.map((school, index) => (
             <tr key={`${school.name}-${index}`} className="hover:bg-slate-50/50 transition-colors">
               <td className="px-6 py-4 text-sm text-slate-500 font-medium">{index + 1}</td>
-              <td className="px-6 py-4 text-sm text-slate-900 font-semibold">{school.name}</td>
               <td className="px-6 py-4 text-sm text-slate-600">
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-800 border border-slate-200">
                   {school.nyayPanchayat}
                 </span>
               </td>
+              <td className="px-6 py-4 text-sm text-slate-900 font-semibold">{school.name}</td>
             </tr>
           ))}
         </tbody>
