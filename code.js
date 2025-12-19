@@ -95,8 +95,8 @@ function generatePdfBase64(schools) {
           <thead>
             <tr>
               <th style="width: 10%">#</th>
-              <th style="width: 50%">School Name</th>
-              <th style="width: 40%">Nyay Panchayat</th>
+              <th style="width: 50%">Nyay Panchayat</th>
+              <th style="width: 40%">School Name</th>
             </tr>
           </thead>
           <tbody>

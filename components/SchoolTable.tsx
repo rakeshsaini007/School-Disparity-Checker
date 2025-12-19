@@ -37,8 +37,8 @@ export const SchoolTable: React.FC<SchoolTableProps> = ({ schools, loading }) =>
         <thead>
           <tr className="bg-slate-50 border-b border-slate-100">
             <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">#</th>
-            <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">School Name</th>
             <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Nyay Panchayat</th>
+            <th className="px-6 py-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">School Name</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-slate-100">
