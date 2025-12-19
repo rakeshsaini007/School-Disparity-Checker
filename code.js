@@ -45,12 +45,9 @@ function doGet(e) {
  * Compares SchoolList vs Data and finds schools in SchoolList not in Data
  */
 function getUncommonSchools(dataSheet, schoolListSheet) {
-  // Assuming headers: [School Name, Nyay Panchayat] in both
   const dataValues = dataSheet.getDataRange().getValues();
   const schoolListValues = schoolListSheet.getDataRange().getValues();
   
-  // Create a Set of keys for recorded data for O(1) lookup
-  // We use "SchoolName|NyayPanchayat" as a unique key
   const recordedKeys = new Set();
   dataValues.forEach((row, index) => {
     if (index === 0) return; // Skip header
@@ -98,8 +95,8 @@ function generatePdfBase64(schools) {
           <thead>
             <tr>
               <th style="width: 10%">#</th>
-              <th style="width: 40%">Nyay Panchayat</th>
               <th style="width: 50%">School Name</th>
+              <th style="width: 40%">Nyay Panchayat</th>
             </tr>
           </thead>
           <tbody>
@@ -109,8 +106,8 @@ function generatePdfBase64(schools) {
     html += `
       <tr>
         <td>${i + 1}</td>
-        <td>${school.nyayPanchayat}</td>
         <td><b>${school.name}</b></td>
+        <td>${school.nyayPanchayat}</td>
       </tr>
     `;
   });
